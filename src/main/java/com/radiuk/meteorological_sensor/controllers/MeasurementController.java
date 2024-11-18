@@ -38,7 +38,7 @@ public class MeasurementController {
 
     @GetMapping("/{id}")
     public MeasurementDTO getSensor(@PathVariable("id") int id) {
-        return convertToMeasurementDTO(measurementService.findOne(id)); // Jackson конвектирует объект в JSON
+        return convertToMeasurementDTO(measurementService.findOne(id));
     }
 
 
@@ -48,6 +48,13 @@ public class MeasurementController {
         measurementService.save(measurement);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+
+
+    @GetMapping("/rainyDaysCount")
+    public Long rainyDaysCount() {
+        return measurementService.findAll().stream().filter(Measurement::isRaining).count();
+    }
+
 
 
 
