@@ -16,6 +16,8 @@ This project (REST API service) receives and processes data from a meteorologica
    `GET /measurements/{id}`
 6. **Register a new measurement in the system**:  
    `POST /measurements/add`
+7. **Get the number of rainy days from the database**:  
+   `POST /measurements/rainyDaysCount`
 
 ## Data Format
 
