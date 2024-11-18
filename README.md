@@ -9,13 +9,13 @@ This project (REST API service) receives and processes data from a meteorologica
 2. **Get a specific sensor by ID**:  
    `GET /sensors/{id}`
 3. **Register a new sensor in the system**:  
-   `POST /sensors`
+   `POST /sensors/registration`
 4. **Get all measurements**:  
    `GET /measurements`
 5. **Get a specific measurement by ID**:  
    `GET /measurements/{id}`
 6. **Register a new measurement in the system**:  
-   `POST /measurements`
+   `POST /measurements/add`
 
 ## Data Format
 

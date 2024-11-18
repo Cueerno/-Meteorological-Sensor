@@ -39,7 +39,7 @@ public class SensorController {
     }
 
 
-    @PostMapping("")
+    @PostMapping("/registration")
     public ResponseEntity<HttpStatus> createSensor(@RequestBody SensorDTO sensorDTO) {
         sensorService.save(convertToSensor(sensorDTO));
         return ResponseEntity.ok(HttpStatus.OK);

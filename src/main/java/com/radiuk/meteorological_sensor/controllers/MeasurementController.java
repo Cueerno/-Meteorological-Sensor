@@ -42,7 +42,7 @@ public class MeasurementController {
     }
 
 
-    @PostMapping("")
+    @PostMapping("/add")
     public ResponseEntity<HttpStatus> createMeasurement(@RequestBody MeasurementDTO measurementDTO) {
         Measurement measurement = modelMapper.map(measurementDTO, Measurement.class);
         measurementService.save(measurement);
