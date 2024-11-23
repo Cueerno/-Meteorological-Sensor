@@ -35,7 +35,7 @@ public class SensorController {
 
     @GetMapping("/{id}")
     public SensorDTO getSensor(@PathVariable("id") int id) {
-        return convertToSensorDTO(sensorService.findOne(id)); // Jackson конвектирует объект в JSON
+        return convertToSensorDTO(sensorService.findOne(id));
     }
 
 
